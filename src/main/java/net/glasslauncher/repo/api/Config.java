@@ -10,12 +10,12 @@ import net.glasslauncher.repo.api.mod.jsonobj.typeadapter.AdapterOtherMod;
 import java.util.logging.Logger;
 
 public class Config {
-    public static String REPOSITORY_URL = "https://glass-launcher.net/repo/";
+    public static String REPOSITORY_URL = "https://glass-repo.net/repo/";
     public static String API_URL = REPOSITORY_URL + "api/";
     public static Gson GSON;
 
     @Getter
-    private static Logger logger = CommonConfig.makeLogger("GlassAPI", "glass-site-api");
+    private static Logger logger = CommonConfig.makeLogger("GlassRepoAPI", "glass-site-api");
 
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();

@@ -23,6 +23,11 @@ public class Mod {
     private String shortDescription;
 
     /**
+     * The markdown formatted description for the mod.
+     */
+    private String description;
+
+    /**
      * The latest version ID for the mod.
      */
     @SerializedName("version_latest")
@@ -100,7 +105,6 @@ public class Mod {
 
     /**
      * The uploaded versions of the mod.
-     * @see Version
      */
-    private Version[] versions;
+    private String[] versions;
 }
