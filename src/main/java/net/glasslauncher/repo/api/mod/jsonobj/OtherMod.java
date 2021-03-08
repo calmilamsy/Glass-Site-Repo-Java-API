@@ -1,7 +1,7 @@
 package net.glasslauncher.repo.api.mod.jsonobj;
 
 import lombok.Getter;
-import net.glasslauncher.repo.api.Config;
+import net.glasslauncher.repo.api.RepoConfig;
 import net.glasslauncher.repo.api.Util;
 
 import java.net.MalformedURLException;
@@ -52,7 +52,7 @@ public class OtherMod {
      * @return Returns null if the mod URL is not a repo URL or cannot be found.
      */
     public Mod getModInfo() {
-        Config.getLogger().info("Retrieving mod info for " + name + "...");
-        return Config.GSON.fromJson(Config.API_URL + "mod/" + name, Mod.class);
+        RepoConfig.getLogger().info("Retrieving mod info for " + name + "...");
+        return RepoConfig.GSON.fromJson(RepoConfig.API_URL + "mod/" + name, Mod.class);
     }
 }

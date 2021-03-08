@@ -3,7 +3,7 @@ package net.glasslauncher.repo.api.mod.jsonobj.typeadapter;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import net.glasslauncher.repo.api.Config;
+import net.glasslauncher.repo.api.RepoConfig;
 import net.glasslauncher.repo.api.mod.jsonobj.OtherMod;
 
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class AdapterOtherMod extends TypeAdapter<OtherMod> {
         try {
             return new OtherMod(inputString);
         } catch (Exception e) {
-            Config.getLogger().info("Caught error parsing unified string \"" + inputString + "\":");
+            RepoConfig.getLogger().info("Caught error parsing unified string \"" + inputString + "\":");
             e.printStackTrace();
         }
         return null;

@@ -2,7 +2,7 @@ package net.glasslauncher.repo.api.mod.jsonobj;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
-import net.glasslauncher.repo.api.Config;
+import net.glasslauncher.repo.api.RepoConfig;
 import org.intellij.lang.annotations.MagicConstant;
 
 import java.net.MalformedURLException;
@@ -93,6 +93,6 @@ public class Version {
             throw new InvalidParameterException("Asked for server file when there is no server file!");
         if (!hasBukkit && side.equals(BUKKIT))
             throw new InvalidParameterException("Asked for bukkit file when there is no bukkit file!");
-        return new URL(Config.REPOSITORY_URL + "mod/" + parentMod + "/versions/" + version + "/download?type=" + type + "&side=" + side);
+        return new URL(RepoConfig.REPOSITORY_URL + "mod/" + parentMod + "/versions/" + version + "/download?type=" + type + "&side=" + side);
     }
 }

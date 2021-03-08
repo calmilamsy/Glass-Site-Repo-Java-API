@@ -20,7 +20,7 @@ public class Util {
         if (unifiedString.contains("|")) {
             String[] parts = unifiedString.split("\\|");
             if (parts[0].matches("^[0-9_a-z]{1,15}$")) {
-                otherMod.put("url", new URL(Config.REPOSITORY_URL + "mod/" + parts[0]));
+                otherMod.put("url", new URL(RepoConfig.REPOSITORY_URL + "mod/" + parts[0]));
                 otherMod.put("id", parts[0]);
             }
             else if (UrlValidator.getInstance().isValid(parts[0])) {
