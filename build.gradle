@@ -22,6 +22,10 @@ sourceCompatibility = 1.8
 repositories {
     mavenLocal()
     mavenCentral()
+    maven {
+        name = "Glass"
+        url "https://maven.glass-launcher.net/repo/"
+    }
 }
 
 dependencies {
@@ -41,7 +45,7 @@ dependencies {
 
     compile 'org.jetbrains:annotations:16.0.2'
 
-    compile "net.glasslauncher:commons:1.1"
+    compile "net.glasslauncher:commons:1.3"
 }
 
 publishing {
@@ -56,11 +60,13 @@ publishing {
 
     repositories {
         mavenLocal()
-        maven {
-            url = "${maven_url}"
-            credentials {
-                username "${maven_username}"
-                password "${maven_password}"
+        if (project.hasProperty("glass_maven_username")) {
+            maven {
+                url = "${glass_maven_url}"
+                credentials {
+                    username "${glass_maven_username}"
+                    password "${glass_maven_password}"
+                }
             }
         }
     }
