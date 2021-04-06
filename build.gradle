@@ -15,7 +15,7 @@ allprojects {
 }
 
 group 'net.glasslauncher.repo'
-version '0.6'
+version '0.7'
 
 sourceCompatibility = 1.8
 
