@@ -2,10 +2,7 @@ package net.glasslauncher.repo.api.mod;
 
 import net.glasslauncher.common.FileUtils;
 import net.glasslauncher.repo.api.RepoConfig;
-import net.glasslauncher.repo.api.mod.jsonobj.Mod;
-import net.glasslauncher.repo.api.mod.jsonobj.ModPreview;
-import net.glasslauncher.repo.api.mod.jsonobj.ModValues;
-import net.glasslauncher.repo.api.mod.jsonobj.Version;
+import net.glasslauncher.repo.api.mod.jsonobj.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -53,8 +50,8 @@ public class RepoReader {
      * @return A ModValues object containing valid mod values.
      * @throws IOException Thrown when something goes wrong with retrieving the valid mod values.
      */
-    public static ModValues getValidValues() throws IOException {
+    public static ValidModValues getValidValues() throws IOException {
         RepoConfig.getLogger().info("Retrieving valid mod values...");
-        return RepoConfig.GSON.fromJson(FileUtils.convertStreamToString(new URL(RepoConfig.API_URL + "validmodvalues").openStream()), ModValues.class);
+        return RepoConfig.GSON.fromJson(FileUtils.convertStreamToString(new URL(RepoConfig.API_URL + "validmodvalues").openStream()), ValidModValues.class);
     }
 }
