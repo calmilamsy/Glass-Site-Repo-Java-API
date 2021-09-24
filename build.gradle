@@ -22,10 +22,6 @@ sourceCompatibility = 1.8
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        name = "Glass"
-        url "https://maven.glass-launcher.net/repo/"
-    }
 }
 
 dependencies {
@@ -45,7 +41,7 @@ dependencies {
 
     compile 'org.jetbrains:annotations:16.0.2'
 
-    compile "net.glasslauncher:commons:1.3"
+    compile "com.github.calmilamsy:Glass-Commons:4aa5302"
 }
 
 publishing {
