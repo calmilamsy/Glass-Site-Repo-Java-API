@@ -42,7 +42,7 @@ dependencies {
 
     compile 'org.jetbrains:annotations:16.0.2'
 
-    compile "com.github.calmilamsy:Glass-Commons:4aa5302a2d"
+    compile "com.github.calmilamsy:Glass-Commons:4aa5302"
 }
 
 publishing {
