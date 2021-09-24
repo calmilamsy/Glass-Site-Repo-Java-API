@@ -22,6 +22,7 @@ sourceCompatibility = 1.8
 repositories {
     mavenLocal()
     mavenCentral()
+	maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -41,7 +42,7 @@ dependencies {
 
     compile 'org.jetbrains:annotations:16.0.2'
 
-    compile "com.github.calmilamsy:Glass-Commons:4aa5302"
+    compile "com.github.calmilamsy:Glass-Commons:4aa5302a2d"
 }
 
 publishing {
